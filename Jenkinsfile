@@ -3,9 +3,11 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'pwd'
-        sh 'ls'
-        sh 'pip install -r requirements.txt'
+        withEnv(["HOME=${env.WORKSPACE}"]) {
+          sh 'pwd'
+          sh 'ls'
+          sh 'pip install -r requirements.txt'
+        }
       }
     }
     stage('test') {
