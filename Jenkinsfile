@@ -6,6 +6,8 @@ pipeline {
         sh 'pwd'
         sh 'ls'
         sh 'echo $HOME'
+        sh 'mkdir -p /.local'
+        sh 'chmod -R 777 /.local'
         sh 'pip install --user -r requirements.txt'
       }
     }
