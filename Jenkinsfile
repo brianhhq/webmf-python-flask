@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
-        sh 'pip install --user -r requirements.txt'
+        sh 'sudo pip install -r requirements.txt'
       }
     }
     stage('test') {
